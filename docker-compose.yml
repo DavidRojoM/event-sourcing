@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  db:
+    image: eventstore/eventstore:lts
+    ports:
+      - '2113:2113'
+      - '1113:1113'
+    command: --insecure --run-projections=All --enable-atom-pub-over-http
